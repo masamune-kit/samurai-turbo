@@ -1,0 +1,19 @@
+.stat-box {
+  border-radius: 4px;
+  border: 1px solid var(--version-2-stroke, #e7eaf3);
+  background: var(--version-2-surface, #fff);
+  box-shadow: 0px 8px 20px 0px rgba(189, 197, 209, 0.2);
+}
+
+.feat-box {
+  border-radius: 4px;
+  background: var(--version-2-surface, #fff);
+  box-shadow: 0px 8px 20px 0px rgba(189, 197, 209, 0.2);
+}
+
+.btn-transparent {
+  background: linear-gradient(117.67deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid #6a6a6a;
+  box-sizing: border-box;
+  border-radius: 4px;
+}

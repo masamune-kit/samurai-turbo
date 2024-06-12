@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './utilities';
+
+@font-face {
+  font-family: DMSans;
+  font-display: swap;
+  src: url('../fonts/DMSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Unbounded;
+  font-display: swap;
+  src: url('../fonts/Unbounded-Regular.ttf') format('truetype');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 27px;
+
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@variants responsive {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}

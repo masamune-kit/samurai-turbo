@@ -1,0 +1,65 @@
+{
+  "name": "samurai-fe",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "dotenv -- turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev": "dotenv -- turbo run dev",
+    "dev:app": "yarn dev --filter=app",
+    "dev:landing": "yarn dev --filter=landing",
+    "dev:contracts": "yarn dev --filter=contracts",
+    "dev:governance": "yarn dev --filter=governance",
+    "dev:treasury": "yarn dev --filter=treasury",
+    "dev:trade": "yarn dev --filter=trade",
+    "dev:lottery": "yarn dev --filter=lottery",
+    "dev:vaults": "yarn dev --filter=vaults",
+    "dev:zen": "yarn dev --filter=zen",
+    "dev:levels": "yarn dev --filter=levels",
+    "dev:ai": "yarn dev --filter=ai",
+    "dev:chat": "yarn dev --filter=chat",
+    "export:app": "yarn build --filter=app && cd ./apps/app && yarn export",
+    "export:landing": "yarn build --filter=landing && cd ./apps/landing && yarn export",
+    "export:contracts": "yarn build --filter=contracts && cd ./apps/contracts && yarn export",
+    "export:governance": "yarn build --filter=governance && cd ./apps/governance && yarn export",
+    "export:treasury": "yarn build --filter=treasury && cd ./apps/treasury && yarn export",
+    "export:trade": "yarn build --filter=trade && cd ./apps/trade && yarn export",
+    "export:lottery": "yarn build --filter=lottery && cd ./apps/lottery && yarn export",
+    "export:vaults": "yarn build --filter=vaults && cd ./apps/vaults && yarn export",
+    "export:zen": "yarn build --filter=zen && cd ./apps/zen && yarn export",
+    "export:levels": "yarn build --filter=levels && cd ./apps/levels && yarn export",
+    "export:ai": "yarn build --filter=ai && cd ./apps/ai && yarn export",
+    "export:chat": "yarn build --filter=chat && cd ./apps/chat && yarn export",
+    "app": "yarn workspace app",
+    "landing": "yarn workspace landing",
+    "contracts": "yarn workspace contracts",
+    "governance": "yarn workspace governance",
+    "treasury": "yarn workspace treasury",
+    "trade": "yarn workspace trade",
+    "lottery": "yarn workspace lottery",
+    "vaults": "yarn workspace vaults",
+    "zen": "yarn workspace zen",
+    "levels": "yarn workspace levels",
+    "ai": "yarn workspace ai",
+    "chat": "yarn workspace chat",
+    "ui": "yarn workspace @samurai/ui"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "^0.2.3",
+    "turbo": "^1.8.8"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "dotenv-cli": "^7.2.1"
+  },
+  "packageManager": "yarn@1.22.19"
+}

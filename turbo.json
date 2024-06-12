@@ -1,0 +1,31 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env"],
+  "globalEnv": [
+    "NODE_ENV",
+    "NEXT_PUBLIC_BE_URL",
+    "OPENAI_API_KEY",
+    "GOOGLE_API_KEY",
+    "GOOGLE_CSE_ID",
+    "OPENAI_ORGANIZATION",
+    "DEFAULT_MODEL",
+    "NEXT_PUBLIC_DEFAULT_SYSTEM_PROMPT",
+    "OPENAI_API_HOST",
+    "NEXT_PUBLIC_DEFAULT_TEMPERATURE",
+    "OPENAI_API_TYPE",
+    "OPENAI_API_VERSION",
+    "AZURE_DEPLOYMENT_ID"
+  ],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    }
+  }
+}
